@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
                 if (!enabledListeners.contains(packageName)) {
                     startActivity(Intent(Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS))
                 } else {
-                    Toast.makeText(this@MainActivity, "Notification Access Granted!", Toast.Notifications.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity, "Notification Access Granted!", Toast.LENGTH_SHORT).show()
                 }
             }
         }

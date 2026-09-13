@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.custom.dynamicisland"
+    namespace = "com.custom.dynamicislandos"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.custom.dynamicisland"
+        applicationId = "com.custom.dynamicislandos"
         minSdk = 26 
         targetSdk = 34
         versionCode = 1

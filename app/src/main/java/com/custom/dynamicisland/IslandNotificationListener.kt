@@ -1,4 +1,4 @@
-package com.custom.dynamicisland
+package com.custom.dynamicislandos
 
 import android.app.Notification
 import android.content.Intent
@@ -16,7 +16,7 @@ class IslandNotificationListener : NotificationListenerService() {
             val text = extras.getCharSequence(Notification.EXTRA_TEXT)?.toString() ?: ""
             
             if (title.isNotEmpty() || text.isNotEmpty()) {
-                val intent = Intent("com.custom.dynamicisland.NOTIFICATION")
+                val intent = Intent("com.custom.dynamicislandos.NOTIFICATION")
                 intent.putExtra("title", title)
                 intent.putExtra("text", text)
                 sendBroadcast(intent)

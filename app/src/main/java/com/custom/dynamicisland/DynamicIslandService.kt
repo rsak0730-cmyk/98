@@ -1,4 +1,4 @@
-package com.custom.dynamicisland
+package com.custom.dynamicislandos
 
 import android.animation.ValueAnimator
 import android.annotation.SuppressLint
@@ -106,7 +106,7 @@ class DynamicIslandService : Service() {
         setupMediaSessions()
         setupVivoDragAndGo()
 
-        val filter = IntentFilter("com.custom.dynamicisland.NOTIFICATION")
+        val filter = IntentFilter("com.custom.dynamicislandos.NOTIFICATION")
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             registerReceiver(notificationReceiver, filter, RECEIVER_NOT_EXPORTED)
         } else registerReceiver(notificationReceiver, filter)
@@ -128,9 +128,7 @@ class DynamicIslandService : Service() {
                 }
             }, componentName)
             
-        } catch (e: SecurityException) {
-            // Needs notification permission, which is handled in MainActivity
-        }
+        } catch (e: SecurityException) {}
 
         btnPlayPause.setOnClickListener {
             val state = activeMediaController?.playbackState?.state
